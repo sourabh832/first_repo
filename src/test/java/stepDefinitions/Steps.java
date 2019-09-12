@@ -25,7 +25,7 @@ public void user_is_on_Home_Page()  {
 	
 	driver.get("http://demo.guru99.com/test/delete_customer.php");
 	driver.findElement(By.name("cusid")).sendKeys("12345");
-	//driver.findElement(By.name("submit")).click();
+	driver.findElement(By.name("submit")).click();
 	
 	WebDriverWait wait = new WebDriverWait(driver, 3 /*timeout in seconds*/);
 	if(wait.until(ExpectedConditions.alertIsPresent())==null)
